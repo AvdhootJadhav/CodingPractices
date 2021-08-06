@@ -71,16 +71,6 @@ vector<bool> visited;
 int n,m;
 queue<int> q;
 
-//void dfs(int v){
-	//cout<<v <<" ";
-	//visited[v]=true;
-	//for(auto h:adj[v]){
-		//if(!visited[h]){
-			//dfs(h);
-			//}
-		//}
-//}
-
 void bfs(int s){
 	q.push(s);
 	visited[s]=true;
@@ -109,8 +99,6 @@ void solve(){
 		adj[u].push_back(v);
 		adj[v].push_back(u);
 		}
-	//dfs(0);
-	//cout<<"\n";
 	bfs(0);
 	cout<<"\n";
 }
