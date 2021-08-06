@@ -66,11 +66,47 @@ ll combination(ll n, ll k) {
         res /= i;
     return res;
 }
+vector<vector<int>> adj;
+vector<bool> visited;
+int n,m;
+queue<int> q;
+
+void dfs(int v){
+	cout<<v <<" ";
+	visited[v]=true;
+	for(auto h:adj[v]){
+		if(!visited[h]){
+			dfs(h);
+			}
+		}
+}
+
+void bfs(int s){
+	q.push(s);
+	visited[s]=true;
+	cout<<s <<" ";
+	while(!q.empty()){
+		int v = q.front();
+		q.pop();
+		for(auto u:adj[v]){
+			if(!visited[u]){
+				visited[u]=true;
+				q.push(u);
+				cout<<u <<" ";
+				}
+			}
+		}
+	cout<<"\n";
+}
 
 void solve(){
+	
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);cin.tie(NULL);
+	int t;
+	cin>>t;
+	while(t--)
 	solve();
 }
