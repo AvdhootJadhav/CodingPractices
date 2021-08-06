@@ -81,24 +81,6 @@ void dfs(int v){
 		}
 }
 
-//void bfs(int s){
-	//q.push(s);
-	//visited[s]=true;
-	//cout<<s <<" ";
-	//while(!q.empty()){
-		//int v = q.front();
-		//q.pop();
-		//for(auto u:adj[v]){
-			//if(!visited[u]){
-				//visited[u]=true;
-				//q.push(u);
-				//cout<<u <<" ";
-				//}
-			//}
-		//}
-	//cout<<"\n";
-//}
-
 void solve(){
 	cin>>n>>m;
 	adj.resize(n);
@@ -111,7 +93,6 @@ void solve(){
 		}
 	dfs(0);
 	cout<<"\n";
-	//bfs(0);
 }
 
 int main(){
